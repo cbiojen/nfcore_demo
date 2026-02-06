@@ -1,0 +1,705 @@
+Feb-06 04:25:53.517 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/demo -profile docker,test --outdir demo-results
+Feb-06 04:25:53.573 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.2
+Feb-06 04:25:53.590 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/workspaces/training/.nextflow/plugins; core-plugins: nf-amazon@3.4.2,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.3,nf-k8s@1.2.2,nf-tower@1.17.3,nf-wave@1.16.1
+Feb-06 04:25:53.605 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-06 04:25:53.605 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-06 04:25:53.607 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Feb-06 04:25:53.618 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Feb-06 04:25:53.724 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-06 04:25:53.731 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /workspaces/training/.nextflow/scm
+Feb-06 04:25:53.739 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Feb-06 04:25:54.091 [main] DEBUG nextflow.scm.AssetManager - Git config: /workspaces/training/.nextflow/assets/nf-core/demo/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/demo.git
+Feb-06 04:25:54.109 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Feb-06 04:25:54.114 [main] DEBUG nextflow.scm.AssetManager - Git config: /workspaces/training/.nextflow/assets/nf-core/demo/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/demo.git
+Feb-06 04:25:54.485 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /workspaces/training/.nextflow/assets/nf-core/demo/nextflow.config
+Feb-06 04:25:54.486 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /workspaces/training/.nextflow/assets/nf-core/demo/nextflow.config
+Feb-06 04:25:54.487 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Feb-06 04:25:54.490 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker,test`
+Feb-06 04:25:55.108 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [debug, conda, mamba, docker, arm64, emulate_amd64, singularity, podman, shifter, charliecloud, apptainer, wave, gpu, test, test_full, abims, adcra, alice, alliance_canada, apollo, arcc, aws_tower, awsbatch, azurebatch, bi, bigpurple, bih, binac, binac2, biohpc_gen, biowulf, bluebear, cambridge, cannon, cbe, ccga_dx, ccga_cau, ceci_dragon2, ceci_nic5, cedars, ceres, cfc, cfc_dev, cheaha, computerome, create, crg, crick, cropdiversityhpc, crukmi, csiro_petrichor, czbiohub_aws, daisybio, denbi_qbic, dkfz, dirac, ebc, eddie, ebi_codon, ebi_codon_slurm, einstein, embl_hd, engaging, ethz_euler, eva, eva_grace, fgcz, fred_hutch, fsu_draco, fub_curta, genotoul, genouest, giga, gis, googlebatch, hasta, hki_genie, hypatia, humantechnopole, icr_alma, icr_davros, ifb_core, imb, imperial, incliva, ipop_up, iris, janelia, jax, jex, unsw_katana, ku_sund_danhead, kaust, ki_luria, leicester, lovelace, lrz_cm4, lugh, m3c, maestro, mana, marjorie, marvin, mccleary, medair, mjolnir_globe, mpcdf, mpcdf_viper, mssm, munin, nci_gadi, nu_genomics, nygc, nyu_hpc, oist, pasteur, pawsey_nimbus, pawsey_setonix, pdc_kth, pe2, phoenix, psmn, qmul_apocrita, rki, rosalind, rosalind_uge, roslin, sage, sahmri, sanger, ilifu, scw, seadragon, seattlechildrens, seawulf, seg_globe, self_hosted_runner, shu_bmrc, software_license, stjude, tes, tigem, tubingen_apg, tufts, tuos_stanage, ucd_sonic, ucl_cscluster, ucl_myriad, uct_hpc, uge, unc_lccc, unc_longleaf, unibe_ibu, unity, uod_hpc, uppmax, utd_ganymede, utd_juno, uw_hyak_pedslabs, uzh, uzl_omics, vai, vsc_calcua, vsc_kul_uhasselt, vsc_ugent, wehi, wustl_htcf, xanadu, york_viking]
+Feb-06 04:25:55.161 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.6.1]
+Feb-06 04:25:55.162 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-06 04:25:55.163 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.6.1]
+Feb-06 04:25:55.656 [main] DEBUG n.plugin.HttpPluginRepository - Registry request: https://registry.nextflow.io/api/v1/plugins/dependencies?plugins=nf-schema%402.6.1&nextflowVersion=25.10.2
+- code: 200
+- body: {"plugins":[{"id":"nf-schema","downloadCount":177715,"downloadGhCount":525374,"releases":[{"version":"2.6.1","url":"https://registry.nextflow.io/api/v1/plugins/nf-schema/2.6.1/download/nf-schema-2.6.1.zip","date":"2025-10-27T10:50:21.364829Z","sha512sum":"467832f2987f90e2d2aa8e6d8387e45d4a0406ce8b5579a71fcd506155b85491bc6e978a536d767508a8ed1a4610a60c1f0cd3d9dc226f4fea1ce2973a23d043","requires":">=25.10.0","dependsOn":[],"downloadCount":19427,"downloadGhCount":0,"status":"PUBLISHED","spec":"{\"$schema\": \"https://raw.githubusercontent.com/nextflow-io/schemas/main/plugin/v1/schema.json\", \"definitions\": [{\"spec\": {\"name\": \"validation\", \"children\": [{\"spec\": {\"name\": \"parametersSchema\", \"type\": \"CharSequence\", \"description\": \"The JSON schema file to use for parameter validation.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"defaultIgnoreParams\", \"type\": \"Set\", \"description\": \"A list of default parameters to ignore during validation. This option should only be used by pipeline developers.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"summary\", \"children\": [{\"spec\": {\"name\": \"beforeText\", \"type\": \"CharSequence\", \"description\": \"The text to show before the summary message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"afterText\", \"type\": \"CharSequence\", \"description\": \"The text to show after the summary message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"hideParams\", \"type\": \"Set\", \"description\": \"A list of parameters to hide in the summary message.\"}, \"type\": \"ConfigOption\"}], \"description\": \"Configuration scope for the parameter summary.\"}, \"type\": \"ConfigScope\"}, {\"spec\": {\"name\": \"help\", \"children\": [{\"spec\": {\"name\": \"showHidden\", \"type\": \"Boolean\", \"description\": \"Show hidden parameters in the help message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"enumLength\", \"type\": \"Integer\", \"description\": \"The maximum length in characters of the enum preview in the help message.\\nThis defaults to the length of the terminal window specified by the `COLUMNS` environment variable or 100 characters if this variable hasn't been set.\\nIf the enum preview exceeds this length, it will be truncated.\\nSet this option to -1 to disable the enum preview truncation.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"beforeText\", \"type\": \"CharSequence\", \"description\": \"The text to show before the help message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"fullParameter\", \"type\": \"CharSequence\", \"description\": \"The parameter to use to show the full help message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"afterText\", \"type\": \"CharSequence\", \"description\": \"The text to show after the help message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"enabled\", \"type\": \"Boolean\", \"description\": \"Enable the help message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"command\", \"type\": \"CharSequence\", \"description\": \"An example command of how to run the pipeline.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"showHiddenParameter\", \"type\": \"CharSequence\", \"description\": \"The parameter to use to show hidden parameters in the help message.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"shortParameter\", \"type\": \"CharSequence\", \"description\": \"The parameter to use to show the short help message.\"}, \"type\": \"ConfigOption\"}], \"description\": \"Configuration scope for the help message.\"}, \"type\": \"ConfigScope\"}, {\"spec\": {\"name\": \"monochromeLogs\", \"type\": \"Boolean\", \"description\": \"Toggle monochrome logs. In monochrome mode, the logs will not be colored.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"showHiddenParams\", \"type\": \"Boolean\", \"description\": \"Show hidden parameters in the help message. This is deprecated, please use `validation.help.showHidden` or the `--showHidden` parameter instead.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"lenientMode\", \"type\": \"Boolean\", \"description\": \"Toggle lenient mode. In lenient mode, the validation of types will be more lenient (e.g. an integer will pass as a string type).\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"logging\", \"children\": [{\"spec\": {\"name\": \"unrecognisedParams\", \"type\": \"ValidationLogger\", \"description\": \"Define the logging level of unrecognised parameters. Defaults to `warn`.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"unrecognisedHeaders\", \"type\": \"ValidationLogger\", \"description\": \"Define the logging level of unrecognised headers that are found in the samplesheets. Defaults to `warn`.\"}, \"type\": \"ConfigOption\"}], \"description\": \"Configuration scope for the logging of the validation plugin.\"}, \"type\": \"ConfigScope\"}, {\"spec\": {\"name\": \"maxErrValSize\", \"type\": \"Integer\", \"description\": \"Maximum size of the value shown in the error message. If the value is larger than this threshold, it will be truncated. Set to -1 to disable truncation.\"}, \"type\": \"ConfigOption\"}, {\"spec\": {\"name\": \"ignoreParams\", \"type\": \"Set\", \"description\": \"A list of parameters to ignore during validation.\"}, \"type\": \"ConfigOption\"}], \"description\": \"The `validation` scope allows you to configure the `nf-schema` plugin.\"}, \"type\": \"ConfigScope\"}, {\"spec\": {\"name\": \"validate\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"?\"}, {\"name\": \"arg1\", \"type\": \"String\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"validate\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"?\"}, {\"name\": \"arg1\", \"type\": \"Path\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"validate\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}, {\"name\": \"arg1\", \"type\": \"?\"}, {\"name\": \"arg2\", \"type\": \"Path\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"validate\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}, {\"name\": \"arg1\", \"type\": \"?\"}, {\"name\": \"arg2\", \"type\": \"String\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"CharSequence\"}, {\"name\": \"arg1\", \"type\": \"CharSequence\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Path\"}, {\"name\": \"arg1\", \"type\": \"CharSequence\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"CharSequence\"}, {\"name\": \"arg1\", \"type\": \"Path\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Path\"}, {\"name\": \"arg1\", \"type\": \"Path\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"CharSequence\"}, {\"name\": \"arg1\", \"type\": \"Path\"}, {\"name\": \"arg2\", \"type\": \"Map\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"CharSequence\"}, {\"name\": \"arg1\", \"type\": \"CharSequence\"}, {\"name\": \"arg2\", \"type\": \"Map\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Path\"}, {\"name\": \"arg1\", \"type\": \"CharSequence\"}, {\"name\": \"arg2\", \"type\": \"Map\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"samplesheetToList\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Path\"}, {\"name\": \"arg1\", \"type\": \"Path\"}, {\"name\": \"arg2\", \"type\": \"Map\"}], \"returnType\": \"List\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"validateParameters\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}], \"returnType\": \"void\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"validateParameters\", \"parameters\": [], \"returnType\": \"void\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsHelp\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"String\"}], \"returnType\": \"String\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsHelp\", \"parameters\": [], \"returnType\": \"String\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsHelp\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}, {\"name\": \"arg1\", \"type\": \"String\"}], \"returnType\": \"String\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsHelp\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}], \"returnType\": \"String\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsSummaryMap\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}, {\"name\": \"arg1\", \"type\": \"WorkflowMetadata\"}], \"returnType\": \"Map\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsSummaryMap\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"WorkflowMetadata\"}], \"returnType\": \"Map\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsSummaryLog\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"Map\"}, {\"name\": \"arg1\", \"type\": \"WorkflowMetadata\"}], \"returnType\": \"String\", \"description\": null}, \"type\": \"Function\"}, {\"spec\": {\"name\": \"paramsSummaryLog\", \"parameters\": [{\"name\": \"arg0\", \"type\": \"WorkflowMetadata\"}], \"returnType\": \"String\", \"description\": null}, \"type\": \"Function\"}]}","description":null}],"projectUrl":"https://github.com/nextflow-io/nf-schema","provider":"nextflow-io","description":null}]}
+Feb-06 04:25:55.679 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.6.1
+Feb-06 04:25:55.696 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.6.1' resolved
+Feb-06 04:25:55.696 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.6.1'
+Feb-06 04:25:55.702 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.6.1
+Feb-06 04:25:55.706 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /workspaces/training/.nextflow/secrets/store.json
+Feb-06 04:25:55.708 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@674aa626] - activable => nextflow.secret.LocalSecretsProvider@674aa626
+Feb-06 04:25:55.708 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Feb-06 04:25:55.709 [main] DEBUG nextflow.cli.CmdRun - Launching `https://github.com/nf-core/demo` [jolly_wright] DSL2 - revision: 45904cb9d1 [master]
+Feb-06 04:25:55.756 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params]
+Feb-06 04:25:55.756 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.756 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, outdir]
+Feb-06 04:25:55.756 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, input]
+Feb-06 04:25:55.756 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genome]
+Feb-06 04:25:55.756 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, igenomes_base]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, igenomes_ignore]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, multiqc_config]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, multiqc_title]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, multiqc_logo]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, max_multiqc_email_size]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, multiqc_methods_description]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, skip_trim]
+Feb-06 04:25:55.757 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, publish_dir_mode]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, email]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, email_on_fail]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, plaintext_email]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, monochrome_logs]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, hook_url]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, help]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, help_full]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, show_hidden]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, version]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, pipelines_testdata_base_path]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, trace_report_suffix]
+Feb-06 04:25:55.758 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, config_profile_name]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, config_profile_description]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, custom_config_version]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, custom_config_base]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, config_profile_contact]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, config_profile_url]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, validate_params]
+Feb-06 04:25:55.759 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, GRCh37]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, fasta]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, bwa]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, bowtie2]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, star]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, bismark]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, gtf]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, bed12]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, readme]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, mito_name]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, macs_gsize]
+Feb-06 04:25:55.760 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh37, blacklist]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, GRCh38]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, fasta]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, bwa]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, bowtie2]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, star]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, bismark]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, gtf]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, bed12]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, mito_name]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, macs_gsize]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCh38, blacklist]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, CHM13]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHM13, fasta]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHM13, bwa]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHM13, bwamem2]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHM13, gtf]
+Feb-06 04:25:55.761 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHM13, gff]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHM13, mito_name]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, GRCm38]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, fasta]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, bwa]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, bowtie2]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, star]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, bismark]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, gtf]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, bed12]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, readme]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, mito_name]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, macs_gsize]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCm38, blacklist]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, TAIR10]
+Feb-06 04:25:55.762 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, fasta]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, bwa]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, bowtie2]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, star]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, bismark]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, gtf]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, bed12]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, readme]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, TAIR10, mito_name]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, EB2]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, fasta]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, bwa]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, bowtie2]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, star]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, bismark]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, gtf]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, bed12]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB2, readme]
+Feb-06 04:25:55.763 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, UMD3.1]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, fasta]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, bwa]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, bowtie2]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, star]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, bismark]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, gtf]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, bed12]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, readme]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, UMD3.1, mito_name]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, WBcel235]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, fasta]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, bwa]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, bowtie2]
+Feb-06 04:25:55.764 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, star]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, bismark]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, gtf]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, bed12]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, mito_name]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, WBcel235, macs_gsize]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, CanFam3.1]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, fasta]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, bwa]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, bowtie2]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, star]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, bismark]
+Feb-06 04:25:55.765 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, gtf]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, bed12]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, readme]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CanFam3.1, mito_name]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, GRCz10]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, fasta]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, bwa]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, bowtie2]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, star]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, bismark]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, gtf]
+Feb-06 04:25:55.766 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, bed12]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, GRCz10, mito_name]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, BDGP6]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, fasta]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, bwa]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, bowtie2]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, star]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, bismark]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, gtf]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, bed12]
+Feb-06 04:25:55.767 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, mito_name]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, BDGP6, macs_gsize]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, EquCab2]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, fasta]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, bwa]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, bowtie2]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, star]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, bismark]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, gtf]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, bed12]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, readme]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EquCab2, mito_name]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, EB1]
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.768 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, fasta]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, bwa]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, bowtie2]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, star]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, bismark]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, gtf]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, bed12]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EB1, readme]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Galgal4]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, fasta]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, bwa]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, bowtie2]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, star]
+Feb-06 04:25:55.769 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, bismark]
+Feb-06 04:25:55.770 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, gtf]
+Feb-06 04:25:55.770 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, bed12]
+Feb-06 04:25:55.770 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Galgal4, mito_name]
+Feb-06 04:25:55.770 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Gm01]
+Feb-06 04:25:55.770 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, fasta]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, bwa]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, bowtie2]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, star]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, bismark]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, gtf]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, bed12]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Gm01, readme]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Mmul_1]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, fasta]
+Feb-06 04:25:55.771 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, bwa]
+Feb-06 04:25:55.772 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, bowtie2]
+Feb-06 04:25:55.772 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, star]
+Feb-06 04:25:55.772 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, bismark]
+Feb-06 04:25:55.772 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, gtf]
+Feb-06 04:25:55.772 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, bed12]
+Feb-06 04:25:55.772 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, readme]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Mmul_1, mito_name]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, IRGSP-1.0]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, fasta]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, bwa]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, bowtie2]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, star]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, bismark]
+Feb-06 04:25:55.773 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, gtf]
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, bed12]
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, IRGSP-1.0, mito_name]
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, CHIMP2.1.4]
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, fasta]
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, bwa]
+Feb-06 04:25:55.774 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, bowtie2]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, star]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, bismark]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, gtf]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, bed12]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, readme]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, CHIMP2.1.4, mito_name]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Rnor_5.0]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, fasta]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, bwa]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, bowtie2]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, star]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, bismark]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, gtf]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, bed12]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_5.0, mito_name]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Rnor_6.0]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, fasta]
+Feb-06 04:25:55.775 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, bwa]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, bowtie2]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, star]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, bismark]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, gtf]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, bed12]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Rnor_6.0, mito_name]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, R64-1-1]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, fasta]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, bwa]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, bowtie2]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, star]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, bismark]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, gtf]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, bed12]
+Feb-06 04:25:55.776 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, mito_name]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, R64-1-1, macs_gsize]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, EF2]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, fasta]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, bwa]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, bowtie2]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, star]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, bismark]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, gtf]
+Feb-06 04:25:55.777 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, bed12]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, readme]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, mito_name]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, EF2, macs_gsize]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Sbi1]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, fasta]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, bwa]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, bowtie2]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, star]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, bismark]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, gtf]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, bed12]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sbi1, readme]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, Sscrofa10.2]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, fasta]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, bwa]
+Feb-06 04:25:55.778 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, bowtie2]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, star]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, bismark]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, gtf]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, bed12]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, readme]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, Sscrofa10.2, mito_name]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, AGPv3]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, fasta]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, bwa]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, bowtie2]
+Feb-06 04:25:55.779 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, star]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, bismark]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, gtf]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, bed12]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, AGPv3, mito_name]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, hg38]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, fasta]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, bwa]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, bowtie2]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, star]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, bismark]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, gtf]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, bed12]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, mito_name]
+Feb-06 04:25:55.780 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, macs_gsize]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg38, blacklist]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, hg19]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, fasta]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, bwa]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, bowtie2]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, star]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, bismark]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, gtf]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, bed12]
+Feb-06 04:25:55.781 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, readme]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, mito_name]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, macs_gsize]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, hg19, blacklist]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, mm10]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, fasta]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, bwa]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, bowtie2]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, star]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, bismark]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, gtf]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, bed12]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, readme]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, mito_name]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, macs_gsize]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, mm10, blacklist]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, bosTau8]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, fasta]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, bwa]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, bowtie2]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, star]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, bismark]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, gtf]
+Feb-06 04:25:55.782 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, bed12]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, bosTau8, mito_name]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, ce10]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, fasta]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, bwa]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, bowtie2]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, star]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, bismark]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, gtf]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, bed12]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, readme]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, mito_name]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, ce10, macs_gsize]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, canFam3]
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.783 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, fasta]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, bwa]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, bowtie2]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, star]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, bismark]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, gtf]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, bed12]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, readme]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, canFam3, mito_name]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, danRer10]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, fasta]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, bwa]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, bowtie2]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, star]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, bismark]
+Feb-06 04:25:55.784 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, gtf]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, bed12]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, mito_name]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, danRer10, macs_gsize]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, dm6]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, fasta]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, bwa]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, bowtie2]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, star]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, bismark]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, gtf]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, bed12]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, mito_name]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, dm6, macs_gsize]
+Feb-06 04:25:55.785 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, equCab2]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, fasta]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, bwa]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, bowtie2]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, star]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, bismark]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, gtf]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, bed12]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, readme]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, equCab2, mito_name]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, galGal4]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, fasta]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, bwa]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, bowtie2]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, star]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, bismark]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, gtf]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, bed12]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, readme]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, galGal4, mito_name]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, panTro4]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, fasta]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, bwa]
+Feb-06 04:25:55.786 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, bowtie2]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, star]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, bismark]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, gtf]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, bed12]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, readme]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, panTro4, mito_name]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, rn6]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, fasta]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, bwa]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, bowtie2]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, star]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, bismark]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, gtf]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, bed12]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, rn6, mito_name]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, sacCer3]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, fasta]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, bwa]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, bowtie2]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, star]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, bismark]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, readme]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, mito_name]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, sacCer3, macs_gsize]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config block [params, genomes, susScr3]
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.787 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, fasta]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, bwa]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, bowtie2]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, star]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, bismark]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, gtf]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, bed12]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, readme]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [params, genomes, susScr3, mito_name]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, cpus]
+Feb-06 04:25:55.788 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, memory]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, time]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, errorStrategy]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, maxRetries]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, maxErrors]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_single]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, cpus]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, memory]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, time]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_low]
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.789 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, cpus]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, memory]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, time]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_medium]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, cpus]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, memory]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, time]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_high]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, cpus]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, memory]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, time]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_long]
+Feb-06 04:25:55.790 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, time]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_high_memory]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, memory]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:error_ignore]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, errorStrategy]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:error_retry]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, errorStrategy]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, maxRetries]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withLabel:process_gpu]
+Feb-06 04:25:55.791 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, ext]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, accelerator]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, resourceLimits]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config option [process, shell]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, publishDir]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withName:FASTQC]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, ext]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, publishDir]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withName:SEQTK_TRIM]
+Feb-06 04:25:55.792 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, publishDir]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, withName:MULTIQC]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, ext]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [process, publishDir]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option true
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [docker]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [docker, enabled]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [docker, runOptions]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [docker, registry]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [conda]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [conda, enabled]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [singularity]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [singularity, enabled]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [singularity, registry]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [podman]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [podman, enabled]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [podman, registry]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [shifter]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config option [shifter, enabled]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator - validate config block [charliecloud]
+Feb-06 04:25:55.793 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [charliecloud, enabled]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [charliecloud, registry]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config block [apptainer]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [apptainer, enabled]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [apptainer, registry]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config block [env]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [env, PYTHONNOUSERSITE]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [env, R_PROFILE_USER]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [env, R_ENVIRON_USER]
+Feb-06 04:25:55.794 [main] DEBUG nextflow.config.ConfigValidator - validate config option [env, JULIA_DEPOT_PATH]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config block [nextflow]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config block [nextflow, enable]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config option [nextflow, enable, configProcessNamesValidation]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config block [timeline]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config option [timeline, enabled]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config option [timeline, file]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config block [report]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config option [report, enabled]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config option [report, file]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config block [trace]
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.795 [main] DEBUG nextflow.config.ConfigValidator - validate config option [trace, enabled]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [trace, file]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config block [dag]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [dag, enabled]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [dag, file]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config block [manifest]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, name]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, contributors]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, homePage]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, description]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, mainScript]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, defaultBranch]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, nextflowVersion]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, version]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [manifest, doi]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [plugins]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config block [validation]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [validation, defaultIgnoreParams]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [validation, monochromeLogs]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config block [session]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config block [executor]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator -   is map option false
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [runName]
+Feb-06 04:25:55.796 [main] DEBUG nextflow.config.ConfigValidator - validate config option [workDir]
+Feb-06 04:25:55.859 [main] DEBUG nextflow.Session - Session UUID: 776201d8-d63b-4b47-ba88-6565b7752062
+Feb-06 04:25:55.860 [main] DEBUG nextflow.Session - Run name: jolly_wright
+Feb-06 04:25:55.861 [main] DEBUG nextflow.Session - Executor pool size: 10
+Feb-06 04:25:55.878 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-06 04:25:55.887 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Feb-06 04:25:55.911 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.2 build 10555
+  Created: 28-11-2025 19:24 UTC (19:24 GMT)
+  System: Linux 6.12.54-linuxkit
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 17.0.17-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 66097@03480277088d [172.17.0.2]
+  CPUs: 10 - Mem: 7.7 GB (125.9 MB) - Swap: 1024 MB (1020.7 MB)
+Feb-06 04:25:55.917 [main] DEBUG nextflow.Session - Work-dir: /Users/jenniferxu/training/hello-nf-core/work [UNKNOWN (0x6a656a63)]
+Feb-06 04:25:55.918 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /workspaces/training/.nextflow/assets/nf-core/demo/bin
+Feb-06 04:25:55.927 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-06 04:25:55.933 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Feb-06 04:25:55.934 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Feb-06 04:25:55.941 [main] DEBUG nextflow.Session - Observer factory (v2): ValidationObserverFactory
+Feb-06 04:25:55.974 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-06 04:25:55.981 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Feb-06 04:25:56.064 [main] DEBUG nextflow.Session - Session start
+Feb-06 04:25:56.078 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: demo-results/pipeline_info/execution_trace_2026-02-06_04-25-54.txt
+Feb-06 04:25:56.080 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Feb-06 04:25:57.032 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-06 04:25:57.036 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_60ef3a85608ba087: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/modules/nf-core/fastqc/main.nf
+  _nf_script_c6283dcbc5995240: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+  _nf_script_733374a645f0cc31: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/modules/nf-core/seqtk/trim/main.nf
+  _nf_script_bfb8b792323e5c40: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/subworkflows/nf-core/utils_nfschema_plugin/main.nf
+  _nf_script_71848a7d1363cd57: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+  _nf_script_65e2ae6d708a038e: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/subworkflows/local/utils_nfcore_demo_pipeline/main.nf
+  _nf_script_20fde63c37ea8038: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/modules/nf-core/multiqc/main.nf
+  _nf_script_e0e30e2657db8b86: /Users/jenniferxu/training/.nextflow/assets/nf-core/demo/workflows/demo.nf
+  Main: /workspaces/training/.nextflow/assets/nf-core/demo/main.nf
+Feb-06 04:25:57.037 [main] DEBUG nextflow.Session - Session aborted -- Cause: java.lang.IllegalStateException
+Feb-06 04:25:57.044 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Feb-06 04:25:57.094 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Feb-06 04:25:57.452 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Feb-06 04:25:57.474 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Feb-06 04:25:57.481 [main] ERROR nextflow.cli.Launcher - @unknown
+java.lang.IllegalStateException: null
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModuleV2PathMapSession(IncludeDef.groovy:148)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure2.doCall(IncludeDef.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModuleV2(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:112)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Main.runScript(Main)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:218)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:260)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy:93)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:429)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
